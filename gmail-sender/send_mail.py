@@ -51,9 +51,9 @@ def main():
     html       : htmlでメールを送る際のhtml plainと同時に指定することはできない。
     """
 
-    from_addr = 'tomiyama.r.1997@gmail.com'
-    to_addrs  = '10380r@gmail.com'
-    password  = 'dgfxpqykktmlifgr' 
+    from_addr = 'from@example.com'
+    to_addrs  = 'to@example.com'
+    password  = '' 
     subject   = 'subject'
     text      = 'this is sent from python script'
     html = 'html書いてね'
