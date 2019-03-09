@@ -1,7 +1,6 @@
 from smtplib import SMTP
 from email.mime.text import MIMEText
 
-
 def create_message_plaintext(text):
     """
     プレーンテキストメールのオブジェクトを生成する
@@ -51,12 +50,16 @@ def main():
     html       : htmlでメールを送る際のhtml plainと同時に指定することはできない。
     """
 
+    # テキストファイルにパーソナルなデータを置いておいて、そこから読み取る
+    with open('data.txt', 'r') as f:
+        data = f.read()
+
     from_addr = 'from@example.com'
     to_addrs  = 'to@example.com'
     password  = '' 
     subject   = 'subject'
     text      = 'this is sent from python script'
-    html = 'html書いてね'
+    html      = 'Your html'
 
     msg = create_message_plaintext(text)
     # msg = create_message_html(html)
